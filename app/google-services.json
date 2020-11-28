@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367831540761",
+    "firebase_url": "https://bussystem-bfe13.firebaseio.com",
+    "project_id": "bussystem-bfe13",
+    "storage_bucket": "bussystem-bfe13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367831540761:android:626cf7d09f7f54c210b688",
+        "android_client_info": {
+          "package_name": "com.example.bus_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367831540761-enngr3nc2pr03nrqgi93aks21esd159r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bus_system",
+            "certificate_hash": "00ed30955506f43dbbc4020b30440c45e8a76a1f"
+          }
+        },
+        {
+          "client_id": "367831540761-qo8ehffnuscqkkpse4e9e9pqge3otddo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZHeIZ4Y92pcx7ejKEV5XsvpcIUtR9YMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367831540761-qo8ehffnuscqkkpse4e9e9pqge3otddo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
