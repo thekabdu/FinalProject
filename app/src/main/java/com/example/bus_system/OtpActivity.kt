@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_otp.*
 
 class OtpActivity : AppCompatActivity() {
 
-   lateinit var auth: FirebaseAuth
+    lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp)
@@ -36,11 +36,11 @@ class OtpActivity : AppCompatActivity() {
             }
         }
     }
-   private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    startActivity(Intent(applicationContext, Menu::class.java))
                     finish()
 // ...
                 } else {

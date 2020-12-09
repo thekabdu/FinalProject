@@ -1,130 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="@color/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bus Ticket"
-                    android:textColor="#FFFFFF"
-                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
-            </LinearLayout>
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="10dp"
-                app:cardCornerRadius="8dp"
-                app:cardUseCompatPadding="true"
-                app:contentPadding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:textColorHint="#FF8A99AF">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:drawableStart="@drawable/ic_location_on_light_blue_24dp"
-                            android:drawablePadding="16dp"
-                            android:fontFamily="@font/open_sans_semibold"
-                            android:hint="Destination"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:textColorHint="#FF8A99AF">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:drawablePadding="16dp"
-                            android:drawableStart="@drawable/ic_location_on_light_blue_24dp"
-                            android:fontFamily="@font/open_sans_semibold"
-                            android:hint="From"
-                            android:inputType="text"
-                            android:maxLines="1"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:textColorHint="#FF8A99AF">
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:drawablePadding="16dp"
-                            android:drawableStart="@drawable/ic_date_range_light_blue_24dp"
-                            android:fontFamily="@font/open_sans_semibold"
-                            android:hint="Select Date"
-                            android:inputType="date"
-                            android:maxLines="1"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <Button
-                android:id="@+id/search_buses"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:background="@color/colorPrimary"
-                android:fontFamily="@font/open_sans_semibold"
-                android:text="Search Buses"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
 
-   lateinit var auth: FirebaseAuth
+    lateinit var auth: FirebaseAuth
     lateinit var storedVerificationId:String
     lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         var currentUser = auth.currentUser
         if(currentUser != null) {
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            startActivity(Intent(applicationContext, Menu::class.java))
             finish()
         }
 
@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                startActivity(Intent(applicationContext, MainActivity::class.java))
+                startActivity(Intent(applicationContext, Menu::class.java))
                 finish()
             }
 
@@ -87,5 +87,4 @@ class LoginActivity : AppCompatActivity() {
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
-
 }

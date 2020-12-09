@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_search">
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.bus_system.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_edit_profile"
+        android:name="com.example.bus_system.ui.editprofile.EditProfile"
+        android:label="@string/menu_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/nav_tickets"
+        android:name="com.example.bus_system.ui.tickets.TicketsFragment"
+        android:label="@string/menu_tickets"
+        tools:layout="@layout/fragment_tickets" />
+    <fragment
+        android:id="@+id/nav_bus_stations"
+        android:name="com.example.bus_system.ui.stations.BusStationsFragment"
+        android:label="@string/menu_edit_profile"
+        tools:layout="@layout/fragment_bus_statioins" />
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.bus_system.ui.contacts.ContactFragment"
+        android:label="@string/menu_contacts"
+        tools:layout="@layout/contact_fragment" />
+
+</navigation>
