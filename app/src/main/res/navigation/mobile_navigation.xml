@@ -9,7 +9,11 @@
         android:id="@+id/nav_search"
         android:name="com.example.bus_system.ui.search.SearchFragment"
         android:label="@string/menu_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_nav_search_to_outboundBuses"
+            app:destination="@id/outboundBuses" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_edit_profile"
@@ -32,5 +36,10 @@
         android:name="com.example.bus_system.ui.contacts.ContactFragment"
         android:label="@string/menu_contacts"
         tools:layout="@layout/contact_fragment" />
+    <activity
+        android:id="@+id/outboundBuses"
+        android:name="com.example.bus_system.ui.search.OutboundBuses"
+        android:label="activity_outbound_buses"
+        tools:layout="@layout/activity_outbound_buses" />
 
 </navigation>

@@ -39,12 +39,13 @@
                 android:textColorHint="#FF8A99AF">
 
                 <EditText
+                    android:id="@+id/edit_txt_from"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableStart="@drawable/ic_location_on_light_blue_24dp"
                     android:drawablePadding="16dp"
                     android:fontFamily="@font/open_sans_semibold"
-                    android:hint="Destination"
+                    android:hint="Destination From"
                     android:inputType="text"
                     android:maxLines="1"
                     android:textColor="@android:color/black"
@@ -58,12 +59,13 @@
                 android:textColorHint="#FF8A99AF">
 
                 <EditText
+                    android:id="@+id/edit_txt_to"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawablePadding="16dp"
                     android:drawableStart="@drawable/ic_location_on_light_blue_24dp"
                     android:fontFamily="@font/open_sans_semibold"
-                    android:hint="From"
+                    android:hint="To"
                     android:inputType="text"
                     android:maxLines="1"
                     android:textColor="@android:color/black"
@@ -74,25 +76,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/date_text_input"
-                android:layout_height="wrap_content"
-                android:layout_width="160dp">
 
-                <EditText
-                    android:id="@+id/date_text"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/user_departure_date"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/ic_date_range_light_blue_24dp" />
+
+                <TextView
+                    android:id="@+id/txt_user_date"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawablePadding="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:drawableStart="@drawable/ic_date_range_light_blue_24dp"
-                    android:fontFamily="@font/open_sans_semibold"
-                    android:hint="Select Date"
-                    android:inputType="date"
-                    android:maxLines="1"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    tools:text="@tools:sample/date/ddmmyy"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/open_sans_semibold"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/seats_text_input"
@@ -123,7 +122,7 @@
 
     </androidx.cardview.widget.CardView>
     <Button
-        android:id="@+id/search_buses"
+        android:id="@+id/btn_search_buses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

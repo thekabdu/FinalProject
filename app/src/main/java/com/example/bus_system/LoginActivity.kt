@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_login.*
 import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
@@ -26,6 +27,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth=FirebaseAuth.getInstance()
+
+        text_for_admin.setOnClickListener {
+            adminlog()
+        }
 
         val Login=findViewById<Button>(R.id.generate_btn)
 
@@ -43,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                startActivity(Intent(applicationContext, Menu::class.java))
+                startActivity(Intent(applicationContext, OtpActivity::class.java))
                 finish()
             }
 
@@ -87,4 +92,5 @@ class LoginActivity : AppCompatActivity() {
             .build()
         PhoneAuthProvider.verifyPhoneNumber(options)
     }
+
 }

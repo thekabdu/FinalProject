@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_ticket_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Almaty"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/img_ic_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_row_to"
+            android:layout_marginStart="15dp"
+            app:layout_constraintLeft_toRightOf="@+id/txt_ticket_from"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taraz"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="15dp"
+            app:layout_constraintLeft_toRightOf="@+id/img_ic_row"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txt_ic_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₸"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintRight_toLeftOf="@+id/txt_ticket_price"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/ticket_bus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super bus"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_ticket_from"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_bus_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14-12-2020"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/ticket_bus_name"
+            app:layout_constraintRight_toLeftOf="@id/txt_ticket_go_time"
+            app:layout_constraintTop_toBottomOf="@id/txt_ticket_from"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_go_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30 PM"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_ticket_price"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_come_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:30 AM"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_ticket_go_time"/>
+
+        <ImageView
+            android:id="@+id/ic_ticket_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_seater"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_bus_name"/>
+
+        <TextView
+            android:id="@+id/txt_ticket_bus_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/ic_ticket_seats"
+            app:layout_constraintTop_toBottomOf="@id/ticket_bus_name"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
