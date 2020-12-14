@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_edit_profile.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 import java.io.ByteArrayOutputStream
 
 
@@ -42,7 +43,9 @@ class EditProfile : Fragment() {
                     .load(user.photoUrl)
                     .into(img_profile)
 
+
             edit_text_name.setText(user.displayName)
+
            // edit_text_surname.text = user.surname
             //edit_text_email.text = user.email
 

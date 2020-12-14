@@ -22,10 +22,7 @@ class BusStationsFragment : Fragment() {
         busStationsViewModel =
                 ViewModelProvider(this).get(BusStationsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_bus_statioins, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        busStationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
         return root
     }
 }

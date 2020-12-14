@@ -1,28 +1,19 @@
 package com.example.bus_system.ui.search
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.DatePicker
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.bus_system.R
-import com.example.bus_system.model.BusesModel
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.FirebaseFirestoreException
-import com.google.firebase.firestore.QuerySnapshot
-import kotlinx.android.synthetic.main.activity_admin_main.*
 import kotlinx.android.synthetic.main.fragment_search.*
 import java.util.*
 
-class SearchFragment : Fragment(R.layout.fragment_search), DatePickerDialog.OnDateSetListener {
+class SearchFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
     var uday = 0
     var umonth = 0
@@ -39,19 +30,14 @@ class SearchFragment : Fragment(R.layout.fragment_search), DatePickerDialog.OnDa
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        val view: View = inflater.inflate(R.layout.fragment_search, null)
 
-        /*db.collection("buses")
-            .whereEqualTo("from", "Almaty")
-            .addSnapshotListener{ querySnapshot, firebaseFirestoreException ->
-                val buses = querySnapshot?.documents?.map {
-                    it.toObject(BusesModel::class.java)
-                }
-                Log.d ("taaag", buses.toString())
-            }*/
-       // pickDate()
-        //searchTicket()
+        initView(view)
+
+        return view
     }
+
+
 
     private fun getDateCalendar(){
         val cal = Calendar.getInstance()
@@ -94,5 +80,8 @@ class SearchFragment : Fragment(R.layout.fragment_search), DatePickerDialog.OnDa
 
     }
 
+    private fun initView(view: View) {
+        //mbtn_search_buses = view.findViewById(R.id. btn_search_buses);
+    }
 
 }

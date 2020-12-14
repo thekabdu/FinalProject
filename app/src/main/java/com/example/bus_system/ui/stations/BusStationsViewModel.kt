@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class BusStationsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "In processing, wait next update)"
     }
     val text: LiveData<String> = _text
 }

@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
         val Login=findViewById<Button>(R.id.generate_btn)
 
-        var currentUser = auth.currentUser
+        val currentUser = auth.currentUser
         if(currentUser != null) {
             startActivity(Intent(applicationContext, Menu::class.java))
             finish()
